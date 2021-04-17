@@ -1,4 +1,54 @@
+body {
+    background: lightslategray }
+section {
+    padding: 1em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%); 
+}
 table, tr, td {
     border-collapse: collapse;
-    border: 1px solid black;
+    border: 1px solid #000000;
+}
+td {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    cursor: pointer;
+}
+.center {
+    text-align: center
+}
+.blue {
+    background-color: blue;
+}
+.green {
+    background-color: green;
+}
+.yellow {
+    background-color: yellow;
+}
+.red {
+    background-color: red;
+}
+.orange {
+    background-color: orangered;
+}
+.violet {
+    background-color: darkorchid;
+}
+.pink {
+    background-color: pink;
+}
+.brown {
+    background-color: saddlebrown;
+}
+.covered {
+    background-color: darkgray;
+    /* cursor: pointer; */
+}
+.covered:hover {
+    background-color: gray;
 }
