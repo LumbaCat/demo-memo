@@ -1,15 +1,12 @@
-// Declarations
-const colors1 = ["blue", "green", "yellow", "red"];
-const colors2 = ["gray", "white", "black", "orange"];
-const colors3 = ["lila", "pink", "kaki", "brown"];
-const colors4 = ["abc", "edf", "hjg", "mlo"];
-const arrayOfColors = [colors1, colors2, colors3, colors4];
+/**
+ * Fabrication du tableau sur la page HTML
+ */
 
 // Récupérer la div dont l'id est "first-div"
 const firstDiv = document.getElementById("first-div");
 
 // Création de la table HTML
-const table = document.createElement("table"); // créer la table
+const table = document.createElement("table"); // créer la table HTML
 
 // Première boucle: sur chaque ligne du tableau des couleurs
 arrayOfColors.forEach((line) => {
@@ -18,7 +15,8 @@ arrayOfColors.forEach((line) => {
   // Deuxième boucle: sur chaque colonne de la ligne
   line.forEach((color) => {
     let td = document.createElement("td"); // créer un élément td (Case HTML)
-    td.innerHTML = color; // Ajouter le texte (le nom de la couleur) dans la case HTML (dans le td)
+    td.setAttribute("name", color); // Définir le nom de la couleur en tant que name de la case HTML (du td)
+    td.setAttribute("class", "covered"); // Définir la couleur de départ ("covered" est défini dans le fichier css) pour la case HTML (du td)
     // Mettre le td dans le tr (mettre la case dans la ligne)
     tr.appendChild(td);
   });
@@ -27,5 +25,6 @@ arrayOfColors.forEach((line) => {
   table.appendChild(tr);
 });
 
-// Mettre l'élément table que l'on a créé dans la div "first-div" du document
+// Mettre l'élément table (notre tableau de couleurs) que l'on a créé dans la div "first-div" du document
+// pour qu'il puisse apparaître sur la page
 firstDiv.appendChild(table);
